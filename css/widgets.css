@@ -1,0 +1,53 @@
+
+
+.btn{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.btn__card{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(38, 126, 199);
+    color: white;
+    border-radius: 0.5rem;
+    min-width: 300px;
+    min-height: 120px;
+    font-size: 30px;
+    font-weight: 600;
+    cursor: pointer;
+}
+.btn__card:hover{
+    box-shadow: 0px 0px 50px 30px rgba(0, 0, 0, 0.363) inset;
+}
+
+
+.counts{
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+}
+.count__card{
+    margin: 0 20px;
+    padding: 30px;
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+    justify-content:space-evenly;
+    color: black;
+    background-color: white;
+    width: 100%;
+    border-radius: 0.5rem;
+    font-size: 20px;
+    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.356);
+}
+
+button{
+    border: none;
+    background-color: cornflowerblue;
+    color: white;
+    padding: 5px 10px;
+    margin: 0 30px;
+}

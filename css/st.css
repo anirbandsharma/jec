@@ -1,0 +1,229 @@
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+    font-family:sans-serif;
+}
+
+body{
+    background-color: #F1F6F9;
+}
+
+main{
+    padding: 1rem;
+}
+
+img{
+    width: 70px;
+    margin: 0 20px;
+}
+.hide{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(90deg);
+    padding: 10px 30px;
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+    height: 90px;
+    padding: 10px 0;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+    background-color: #394867;
+    width: 100%;
+}
+.part2{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0 30px;
+}
+.head h1{
+    font-size: 30px;
+    color: rgb(255, 255, 255);
+    padding: 0;
+    cursor: pointer;
+}
+.head p{
+  font-size: 20px;
+  color: rgb(250, 250, 250);
+}
+.text{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.head h1{
+    font-size: 38px;
+    font-weight: 600;
+    color: rgb(255, 255, 255);
+}
+
+
+
+body a:hover{
+    text-decoration: underline;
+}
+
+.login p{
+    text-align: center;
+    padding: 30px 0;
+    font-size: 14px;
+}
+.line{
+    width: 100%;
+    height: 0.5px;
+    background-color: rgba(66, 66, 66, 0.726);
+    margin: 10px 0;
+}
+.createAc{
+    background-color: rgb(43, 167, 18);
+    width: 100%;
+    border: none;
+    border-radius: 0.5rem;
+    font-size: 18px;
+    font-weight: 800;
+    color: white;
+    padding: 14px;
+    margin:  14px 0; 
+}
+.createAc:hover{
+    background-color: rgb(40, 151, 18);
+}
+
+
+.modal {
+   position: relative;
+    overflow: auto; /* Enable scroll if needed */
+    background-color: #F1F6F9;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px 0;
+    height: 100%;
+  }
+  
+  /* Modal Content */
+  .modal-content {
+    background-color: #fefefe;
+    padding: 10px;
+    width: 80%;
+    height: 100%;
+    box-shadow: 0 0 5px rgba(182, 182, 182, 0.849);
+    border-radius: 0.5rem;
+    display: flex;
+    flex-direction: column;
+  }
+  .modal-content form .row{
+      display: flex;
+    align-items: center;
+    padding: 5px;
+  }
+  .row label{
+      width: 190px;
+  }
+  .modal-content form .title{
+      margin: 5px;
+      margin-top: 10px;
+      color: gray;
+      font-size: 12px;
+  }
+  .modal-content form input:not([type='submit']) ,select{
+      width: 100%;
+      padding: 12px 15px;
+      margin: 5px;
+      border: 0.5px solid rgba(121, 121, 121, 0.315);
+      border-radius: 0.5rem;
+      background-color: rgba(233, 233, 233, 0.281);
+  }
+  .radio-btn{
+    width: 90%;
+    border: 1px solid gray;
+    margin: 5px;
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border: 0.5px solid rgba(121, 121, 121, 0.315);
+    border-radius: 0.5rem;
+  }
+  .modal-content form p{
+      color: gray;
+      font-size: 11.5px;
+  }
+
+
+  /* navigation madal */
+  .modal-nav {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 20; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+  }
+  
+  /* Modal Content */
+  .nav-content {
+    z-index: 20; /* Sit on top */
+    position: absolute;
+    top: 80px;
+    left: 10px;
+    background-color: #fefefe;
+    margin: auto;
+    padding: 20px;
+    width: 25%;
+    box-shadow: 0 0 5px rgb(153, 153, 153);
+    border-radius: 0.5rem;
+  }
+
+  .modal-options{
+    animation: ex 0.2s ease-out;
+}
+.modal-options a{
+    font-size: 18px;
+    text-decoration: none;
+    color: black;
+}
+  
+@keyframes ex {
+    0% {transform: translateX(100%); opacity: 0;}
+    100% {transform: translateX(0); opacity: 1;}
+}
+
+table{
+    min-width: 95vw;
+    border-spacing: 0;
+    table-layout: fixed;
+    background-color: white;
+    box-shadow: 0px 0px 5px 1px rgba(0, 0, 0, 0.577);
+}
+table th, td{
+    border: 1px solid rgba(0, 0, 0, 0.555);
+    word-break: break-all;
+}
+
+
+.search{
+    width: 70%;
+    padding: 20px;
+}
+#search{
+    width: 100%;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    border-radius: 2rem;
+    border: none;
+    box-shadow: 0px 0px 5px 1px;
+    text-align: center;
+    font-size: 18px;
+}
