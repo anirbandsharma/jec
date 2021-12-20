@@ -61,7 +61,7 @@ $alumni_total_contri=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(total) fr
             <div class="count__card">
                 <center><h3><u>Alumni</u></h3></center>
                 <p>
-                    Total Registered : <strong><?php echo $alumni_total[0]; ?></strong> <button onclick="location.href='viewalu.php'">View</button>
+                    Total Registered : <strong><?php echo $alumni_total[0]; ?></strong> <button onclick="location.href='./viewalu.php'">View</button>
                 </p>
                 <p>
                     Total Arrived : <strong><?php echo $alumni_arrived[0]; ?></strong> <button onclick="location.href='viewalu_firstday.php'">View</button> 

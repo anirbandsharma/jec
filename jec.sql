@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:8889
--- Generation Time: Dec 20, 2021 at 08:33 AM
+-- Generation Time: Dec 20, 2021 at 09:05 AM
 -- Server version: 5.7.32
 -- PHP Version: 7.4.12
 
@@ -463,9 +463,25 @@ CREATE TABLE `first_day` (
   `add_contribution` int(255) DEFAULT NULL,
   `total` int(255) NOT NULL,
   `reg_date` datetime DEFAULT NULL,
-  `coupon` int(100) NOT NULL DEFAULT '0',
+  `coupon` int(100) DEFAULT '0',
+  `remarks` varchar(255) DEFAULT NULL,
   `role` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `guest`
+--
+
+CREATE TABLE `guest` (
+  `id` int(100) NOT NULL,
+  `phone` varchar(255) NOT NULL,
+  `name` varchar(255) NOT NULL,
+  `contribution` varchar(255) DEFAULT NULL,
+  `coupon` int(100) DEFAULT NULL,
+  `remarks` varchar(255) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 
 -- --------------------------------------------------------
 
@@ -515,6 +531,12 @@ ALTER TABLE `first_day`
   ADD UNIQUE KEY `phone` (`phone`);
 
 --
+-- Indexes for table `guest`
+--
+ALTER TABLE `guest`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Indexes for table `second_day`
 --
 ALTER TABLE `second_day`
@@ -529,19 +551,25 @@ ALTER TABLE `second_day`
 -- AUTO_INCREMENT for table `alumni`
 --
 ALTER TABLE `alumni`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=413;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=414;
 
 --
 -- AUTO_INCREMENT for table `faculty`
 --
 ALTER TABLE `faculty`
-  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `first_day`
 --
 ALTER TABLE `first_day`
-  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id` int(255) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `guest`
+--
+ALTER TABLE `guest`
+  MODIFY `id` int(100) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT for table `second_day`

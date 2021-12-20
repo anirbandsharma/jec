@@ -21,7 +21,7 @@
         <div id="myModal" class="modal">
             <div class="modal-content">
 
-                <form action="faculty_reg1.php" method="POST">
+                <form action="guest_reg1.php" method="POST">
 
                      <div class="row">
                         <label>Phone</label>
