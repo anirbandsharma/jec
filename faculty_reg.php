@@ -55,6 +55,11 @@
 
                             <option value="MCA">MCA</option>
 
+                            <option value="Physics">Physics</option>
+                            <option value="Cheistry">Cheistry</option>
+                            <option value="Matheatics">Matheatics</option>
+                            <option value="Huanities">Huanities</option>
+                            <option value="Others">Others</option>
                         </select>
                     </div>
 
