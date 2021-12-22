@@ -20,11 +20,11 @@ $role = "alumni";
 
 
 				$query = "INSERT INTO `alumni` (`id`, `email`, `phone`, `name`, `address`, `yop`, `branch`, `chapter`, `contribution`, `add_contribution`, `total`, `reg_date`, `coupon`) VALUES (null, '$email', '$phone', '$name', '$address', '$yop', '$branch', '$chapter', '$contribution', '$add_contribution', '$total', CURRENT_TIMESTAMP(), $coupon)  ON DUPLICATE KEY UPDATE   
-				`add_contribution`= '$add_contribution', `reg_date`='$date', `total` = '$total', `coupon` = '$coupon'  ";
+				`contribution`= '$contribution', `add_contribution`= '$add_contribution', `reg_date`='$date', `total` = '$total', `coupon` = '$coupon'  ";
 
 				if (mysqli_query($con, $query)) {
 					mysqli_query( $con,  "INSERT INTO `first_day` (`id`, `email`, `phone`, `name`, `address`, `yop`, `branch`, `chapter`, `contribution`, `add_contribution`, `total`, `reg_date`, `coupon`, `remarks`, `role`) VALUES (null, '$email', '$phone', '$name', '$address', '$yop', '$branch', '$chapter', '$contribution', '$add_contribution', '$total', CURRENT_TIMESTAMP(), '$coupon', null, '$role')  ON DUPLICATE KEY UPDATE   
-				`add_contribution`= '$add_contribution', `reg_date`='$date', `total` = '$total', `coupon` = '$coupon' ");
+				`contribution`= '$contribution',`add_contribution`= '$add_contribution', `reg_date`='$date', `total` = '$total', `coupon` = '$coupon' ");
 
 					header("location:alumni_reg.php");
 				} else {
