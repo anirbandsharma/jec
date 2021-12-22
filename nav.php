@@ -37,7 +37,7 @@
             <div class="line"></div>
         </center>
         <br>
-
+        <h3>Alumni</h3>
         <div class="modal-options">
            <a href="alumni_reg.php">Register New Alumni</a>
         </div>
@@ -50,6 +50,7 @@
             <div class="line"></div>
         </center>
         <br>
+        <h3>Faculty</h3>
         <div class="modal-options">
            <a href="faculty_reg.php">Faculty Registration</a>
         </div>
@@ -63,6 +64,7 @@
             <div class="line"></div>
         </center>
         <br>
+        <h3>Staff</h3>
         <div class="modal-options">
            <a href="staff_reg.php">Staff Registration</a>
         </div>
