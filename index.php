@@ -11,6 +11,10 @@ $faculty_total=mysqli_fetch_array(mysqli_query($con, "SELECT count(*) from facul
 $faculty_arrived=mysqli_fetch_array(mysqli_query($con, "SELECT count(*) from first_day where role = 'faculty'"));
 $faculty_coupons=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(coupon) from first_day where role = 'faculty'"));
 
+$staff_total=mysqli_fetch_array(mysqli_query($con, "SELECT count(*) from staff"));
+$staff_arrived=mysqli_fetch_array(mysqli_query($con, "SELECT count(*) from first_day where role = 'staff'"));
+$staff_coupons=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(coupon) from first_day where role = 'staff'"));
+
 
 $alumni_total_contri=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(total) from alumni"));
 
@@ -83,15 +87,15 @@ $alumni_total_contri=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(total) fr
                 </p>
             </div>
             <div class="count__card">
-                <center><h3><u>Guest</u></h3></center>
+                <center><h3><u>Staff</u></h3></center>
                 <p>
-                    Total Registered : <strong>478</strong><button onclick="location.href='viewalu.php'">View</button>
+                    Total Registered : <strong><?php echo $staff_total[0]; ?></strong><button onclick="location.href='viewstaff.php'">View</button>
                 </p>
                 <p>
-                    Total Arrived : <strong>378</strong><button onclick="location.href='viewalu.php'">View</button>
+                    Total Arrived : <strong><?php echo $staff_arrived[0]; ?></strong><button onclick="location.href='#'">View</button>
                 </p>
                 <p>
-                    Coupons distributed : <strong>398</strong>
+                    Coupons distributed : <strong><?php echo $staff_coupons[0]; ?></strong>
                 </p>
             </div>
             
