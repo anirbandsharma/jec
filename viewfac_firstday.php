@@ -28,36 +28,35 @@
 
         <div id="myModal" class="modal">
         <table id="datatable" class="mdl-data-table">
-                <thead style="background-color: lightgray;">
+        <thead style="background-color: #394867; color: white;">
                     <th>ID</th>
-                    <th >Phone</th>
                     <th >Name</th>
                     <th >Department</th>
-                    <th >Total Contribution</th>
+                    <th >Mode of payment</th>
+                    <th >Amount</th>
                     <th >Coupon</th>
-                    
                 </thead>
                 <tbody>
 
                     <?php
                       include "connect.php";
-                      $sql="select * from first_day where role='faculty'";
+                      $sql="select * from first_day where role = 'faculty' ";
                       $result=mysqli_query($con,$sql);
                       while($row=mysqli_fetch_array($result))
                           {
                             ?>
                             <tr>
-                            <td ><?php echo $row[0]; ?></td>
+                            <td><?php echo $row[0]; ?></td>
                             
-                            <td   ><?php echo $row[2]; ?></td>
+                            <td  ><?php echo $row[3]; ?></td>
                             
-                            <td   ><?php echo $row[3]; ?></td>
-                            
-                            <td style=" <?php if($row[3] == "") {echo 'background-color:rgba(160, 4, 4, 0.314);';} ?>" ><?php echo $row[6]; ?></td>
-                            
-                            <td  ><?php echo $row[10]; ?></td>
+                            <td  ><?php echo $row[6]; ?></td>
 
-                            <td  ><?php echo $row[12]; ?></td>
+                            <td ><?php echo $row[13]; ?></td>
+                            
+                            
+                            <td ><?php echo $row[10]; ?></td>
+                            <td ><?php echo $row[12]; ?></td>
                            
                             <?php
                     echo '</tr>';

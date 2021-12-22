@@ -26,11 +26,12 @@
 
 .counts{
     display: flex;
+    flex-wrap: wrap;
     align-items: center;
     justify-content: space-evenly;
+    gap: 30px;
 }
 .count__card{
-    margin: 0 20px;
     padding: 30px;
     display: flex;
     gap: 30px;
@@ -38,16 +39,33 @@
     justify-content:space-evenly;
     color: black;
     background-color: white;
-    width: 100%;
+    max-width: 500px;
     border-radius: 0.5rem;
     font-size: 20px;
-    box-shadow: 0 0 15px 5px rgba(0, 0, 0, 0.356);
+    box-shadow: 0 0 20px 15px rgba(0, 0, 0, 0.15);
 }
 
 button{
     border: none;
-    background-color: cornflowerblue;
+    background-color: steelblue ;
     color: white;
-    padding: 5px 10px;
+    padding: 10px 15px;
     margin: 0 30px;
+    font-weight: 700;
+    animation: btn_ani 5s  infinite;
 }
+/* 
+@keyframes btn_ani{
+    0% {
+        background-color: blue;
+    }
+   33%{
+        background-color: red;
+    }
+    66%{
+        background-color: green;
+    }
+    100%{
+        background-color: blue;
+    }
+} */

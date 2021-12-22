@@ -1,10 +1,10 @@
 <?php
 include('connect.php');
 
-$email = $_POST["email"];
+$email =  empty($_POST['email']) ? null : $_POST["email"];
 $phone =  empty($_POST['phone']) ? null :  $_POST["phone"];
 $name = $_POST["name"];
-$chapter = $_POST["chapter"];
+$chapter =  empty($_POST['chapter']) ? null : $_POST["chapter"];
 $address =  empty($_POST['address']) ? null :  $_POST["address"];
 $occupation =  empty($_POST['occupation']) ? null : $_POST["occupation"];
 $yop =  empty($_POST['yop']) ? null : $_POST["yop"];

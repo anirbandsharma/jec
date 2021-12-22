@@ -17,6 +17,11 @@ $staff_coupons=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(coupon) from fi
 
 
 $alumni_total_contri=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(total) from alumni"));
+$first_alumni_total_contri=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(total) from first_day where role = 'alumni' "));
+
+
+$faculty_total_contri=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(amount) from faculty"));
+$first_faculty_total_contri=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(total) from first_day where role = 'faculty' "));
 
 ?>
 
@@ -101,25 +106,45 @@ $alumni_total_contri=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(total) fr
                     Coupons distributed : <strong><?php echo $staff_coupons[0]; ?></strong>
                 </p>
             </div>
-            
-            
-        </div>
-<br> <br>
-        <div class="counts">
             <div class="count__card">
-                <center><h3><u>Contribution</u></h3></center>
+                <center><h3><u>Guest</u></h3></center>
+                <p>
+                    Total Registered : <strong><?php echo $guest_total[0]; ?></strong><button onclick="location.href='viewguest.php'">View</button>
+                </p>
+                <p>
+                    Total Arrived : <strong><?php echo $guest_arrived[0]; ?></strong><button onclick="location.href='#'">View</button>
+                </p>
+                <p>
+                    Coupons distributed : <strong><?php echo $guest_coupons[0]; ?></strong>
+                </p>
+            </div>
+            <div class="count__card">
+                <center><h3><u>Alumni Contribution</u></h3></center>
                 <p>
                     Total Alumni Contribution : <strong>Rs. <?php echo $alumni_total_contri[0]; ?></strong>
                 </p>
                 <p>
-                    New Alumni Contribution on 26th : <strong>Rs. 67,478</strong>
+                    New Alumni Contribution on 26th : <strong>Rs. <?php echo $first_alumni_total_contri[0]; ?></strong>
                 </p>
                 <p>
                     New Alumni Contribution on 27th : <strong>Rs. 0</strong>
                 </p>
-               
-            </div>
         </div>
+        <div class="count__card">
+                <center><h3><u>Faculty Contribution</u></h3></center>
+                <p>
+                    Total Alumni Contribution : <strong>Rs. <?php echo $faculty_total_contri[0]; ?></strong>
+                </p>
+                <p>
+                    New Alumni Contribution on 26th : <strong>Rs. <?php echo $first_faculty_total_contri[0]; ?></strong>
+                </p>
+                <p>
+                    New Alumni Contribution on 27th : <strong>Rs. 0</strong>
+                </p>
+        </div>
+            
+        </div>
+           
 
 
 

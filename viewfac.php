@@ -28,12 +28,13 @@
 
         <div id="myModal" class="modal">
         <table id="datatable" class="mdl-data-table">
-                <thead style="background-color: lightgray;">
+                <thead style="background-color: #394867; color: white;">
                     <th>ID</th>
                     <th >Name</th>
                     <th >Department</th>
                     <th >Mode of payment</th>
                     <th >Reciept no.</th>
+                    <th >Contribution</th>
                     <th >Actions</th>
                 </thead>
                 <tbody>
@@ -55,9 +56,23 @@
                             <td ><?php echo $row[3]; ?></td>
 
                             <td ><?php echo $row[4]; ?></td>
+                            <td ><?php echo $row[5]; ?></td>
                             
                             <td >
-                                
+                            <form action="faculty_reg_coupon.php" method="POST">
+
+<input type="TEXT" name="id" value="<?php echo $row[0]; ?>">
+<input type="text" name="name" value="<?php echo $row[1]; ?>">
+<input type="text" name="department" value="<?php echo $row[2]; ?>">
+<input type="text" name="mode_of_payment" value="<?php echo $row[3]; ?>">
+<input type="text" name="contribution" value="<?php echo $row[5]; ?>">
+
+    <div class="row">
+    <label for="add">coupon</label>
+    <input type="text" placeholder="coupon" name="coupon" style="margin: 3px 0; padding: 5px;" value="<?php echo $row[6]; ?>">
+    </div>
+    <input type="submit" class="createAc" value="Submit" style="padding: 5px;" >
+</form>    
                             </td>
                            
                             <?php

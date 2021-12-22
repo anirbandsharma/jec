@@ -28,7 +28,7 @@
 
         <div id="myModal" class="modal">
         <table id="datatable" class="mdl-data-table">
-                <thead style="background-color: lightgray;">
+                <thead style="background-color:  #394867; color: white;">
                     <th>ID</th>
                     <th >Name</th>
                     <th >Contribution</th>
