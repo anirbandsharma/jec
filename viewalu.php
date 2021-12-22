@@ -29,7 +29,7 @@
 
         <div id="myModal" class="modal">
         <table id="datatable" class="mdl-data-table">
-                <thead style="background-color: lightgray;">
+                <thead style="background-color: #394867; color: white;">
                     <th style="text-align:center; width:2%;">ID</th>
                     <th style="text-align:center; width:14%;">Name</th>
                     <th style="text-align:center; width:12%;">E-mail</th>
@@ -38,8 +38,8 @@
                     <th style="text-align:center; width:10%;">Batch</th>
                     <th style="text-align:center; width:10%;">Chapter</th>
                     <th style="text-align:center; width:12%;">Address</th>
-                    <th style="text-align:center; width:10%;">Total Contribution</th>
-                    <th style="text-align:center; width:10%;">Date</th>
+                    <th style="text-align:center; width:7%;">Total Contribution</th>
+                    <th style="text-align:center; width:13%;">Actions</th>
                 </thead>
                 <tbody>
 
@@ -68,9 +68,35 @@
                             <td style="text-align:center; width:12%;<?php if($row[4] == "") {echo 'background-color:rgba(160, 4, 4, 0.314);';} ?>" ><?php echo $row[4]; ?></td>
                             
                             
-                            <td style="text-align:center; width:10%;" ><?php echo $row[10]; ?></td>
-                            
-                            <td style="text-align:center; width:10%;" ><?php echo $row[11]; ?></td>
+                            <td style="text-align:center; width:7%;" ><?php echo $row[10]; ?></td>
+
+                            <td style="text-align:center; width:13%;" >
+                        <form action="alumni_reg_coupon.php" method="POST">
+
+                        <input type="hidden" name="id" value="<?php echo $row[0]; ?>">
+                        <input type="hidden" name="email" value="<?php echo $row[1]; ?>">
+                        <input type="hidden" name="phone" value="<?php echo $row[2]; ?>">
+                        <input type="hidden" name="name" value="<?php echo $row[3]; ?>">
+                        <input type="hidden" name="address" value="<?php echo $row[4]; ?>">
+                        <input type="hidden" name="yop" value="<?php echo $row[5]; ?>">
+                        <input type="hidden" name="branch" value="<?php echo $row[6]; ?>">
+                        <input type="hidden" name="chapter" value="<?php echo $row[7]; ?>">
+                        <input type="hidden" name="contribution" value="<?php echo $row[8]; ?>">
+                        <input type="hidden" name="reg_date" value="<?php echo $row[11]; ?>">
+
+
+                            <div class="row"></div>
+                            <label for="add">additional</label>
+                            <input type="text" name="add_contribution" placeholder="additional"  style="margin: 3px 0; padding: 5px;" value="<?php echo $row[9]; ?>">
+                            </div>
+                            <br> <br>
+                            <div class="row">
+                            <label for="add">coupon</label>
+                            <input type="text" placeholder="coupon" name="coupon" style="margin: 3px 0; padding: 5px;" value="<?php echo $row[12]; ?>">
+                            </div>
+                            <input type="submit" class="createAc" value="Submit" style="padding: 5px;" >
+                        </form>    
+                        </td>
 
                             <?php
                     echo '</tr>';
