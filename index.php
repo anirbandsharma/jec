@@ -49,6 +49,9 @@ $alumni_total_contri=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(total) fr
             <div class="btn__card" onclick="location.href='faculty_reg.php'">
                 <p>Register Faculty</p>
             </div>
+            <div class="btn__card" onclick="location.href='staff_reg.php'">
+                <p>Register Staff</p>
+            </div>
             <div class="btn__card" onclick="location.href='guest_reg.php'">
                 <p>Register Guest</p>
             </div>
