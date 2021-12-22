@@ -30,10 +30,11 @@
         <table id="datatable" class="mdl-data-table">
                 <thead style="background-color: lightgray;">
                     <th>ID</th>
-                    <th >Phone</th>
                     <th >Name</th>
                     <th >Department</th>
-                    <th >Total Contribution</th>
+                    <th >Mode of payment</th>
+                    <th >Reciept no.</th>
+                    <th >Actions</th>
                 </thead>
                 <tbody>
 
@@ -50,10 +51,14 @@
                             <td  ><?php echo $row[1]; ?></td>
                             
                             <td  ><?php echo $row[2]; ?></td>
-                            
-                            <td style="<?php if($row[3] == "") {echo 'background-color:rgba(160, 4, 4, 0.314);';} ?>" ><?php echo $row[3]; ?></td>
-                            
+
+                            <td ><?php echo $row[3]; ?></td>
+
                             <td ><?php echo $row[4]; ?></td>
+                            
+                            <td >
+                                
+                            </td>
                            
                             <?php
                     echo '</tr>';
