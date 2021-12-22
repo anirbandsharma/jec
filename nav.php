@@ -54,7 +54,8 @@
            <a href="faculty_reg.php">Faculty Registration</a>
         </div>
         <br>
-        <div class="viewfac.php">View Faculty</a>
+        <div class="modal-options">
+        <a href="viewfac.php">View Faculty</a>
         </div>
 
         <br>
@@ -63,10 +64,11 @@
         </center>
         <br>
         <div class="modal-options">
-           <!-- <a href="faculty_reg.php">Faculty Registration</a> -->
+           <a href="staff_reg.php">Staff Registration</a>
         </div>
         <br>
-        <div class="viewstaff.php">View Staff</a>
+        <div class="modal-options">
+        <a href="viewstaff.php">View Staff</a>
         </div>
        
 

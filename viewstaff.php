@@ -33,6 +33,7 @@
                     <th >Name</th>
                     <th >Contribution</th>
                     <th >Phone</th>
+                    <th >Coupon</th>
                 </thead>
                 <tbody>
 
@@ -52,7 +53,8 @@
                             
                             <td style="<?php if($row[3] == "") {echo 'background-color:rgba(160, 4, 4, 0.314);';} ?>" ><?php echo $row[3]; ?></td>
                             
-                           
+                            <td  ><?php echo $row[4]; ?></td>
+
                             <?php
                     echo '</tr>';
                           }   
