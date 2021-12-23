@@ -23,10 +23,7 @@
 
                 <form action="faculty_reg1.php" method="POST">
 
-                     <div class="row">
-                        <label>Phone</label>
-                        <input type="number" minlength="10" maxlength="10" name="phone" id="phone" placeholder="Phone" onkeyup="GetDetail(this.value)">
-                    </div>
+                     
 
                     
 
@@ -64,12 +61,22 @@
                     </div>
 
 
+                    <div class="row">
+                        <label>Mode of Payment</label>
+                        <input type="text" name="mode_of_payment" >
+                    </div>
+
+                    <div class="row">
+                        <label>Reciept no.</label>
+                        <input type="text" name="reciept_no" id="reciept_no" placeholder="reciept_no" >
+                    </div>
 
 
                     <div class="row">
                         <label>Contribution</label>
                         <input type="text" name="contribution" id="contribution" placeholder="Contribution" required>
                     </div>
+
 
                     <div class="row">
                         <label for="">Additional Contribution</label>
