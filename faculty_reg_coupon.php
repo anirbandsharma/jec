@@ -7,7 +7,6 @@ $dept =  $_POST["department"];
 $contribution = $_POST["contribution"];
 $add_contribution = empty($_POST['add_contribution']) ? '0' : $_POST['add_contribution'];
 $coupon = empty($_POST['coupon']) ? '0' : $_POST['coupon'];
-$total = $contribution + $add_contribution;
 $mode_of_payment = $_POST["mode_of_payment"];
 $role= "faculty";
 

@@ -101,13 +101,13 @@ $first_faculty_total_contri=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(to
                     Total Registered : <strong><?php echo $staff_total[0]; ?></strong><button onclick="location.href='viewstaff.php'">View</button>
                 </p>
                 <p>
-                    Total Arrived : <strong><?php echo $staff_arrived[0]; ?></strong><button onclick="location.href='#'">View</button>
+                    Total Arrived : <strong><?php echo $staff_arrived[0]; ?></strong><button onclick="location.href='viewstaff_firstday.php'">View</button>
                 </p>
                 <p>
                     Coupons distributed : <strong><?php echo $staff_coupons[0]; ?></strong>
                 </p>
             </div>
-            <div class="count__card">
+            <!-- <div class="count__card">
                 <center><h3><u>Guest</u></h3></center>
                 <p>
                     Total Registered : <strong><?php echo $guest_total[0]; ?></strong><button onclick="location.href='viewguest.php'">View</button>
@@ -118,7 +118,7 @@ $first_faculty_total_contri=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(to
                 <p>
                     Coupons distributed : <strong><?php echo $guest_coupons[0]; ?></strong>
                 </p>
-            </div>
+            </div> -->
             <div class="count__card">
                 <center><h3><u>Alumni Contribution</u></h3></center>
                 <p>
