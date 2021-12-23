@@ -13,8 +13,8 @@ $role= "staff";
 				`amount`= '$contribution', `coupon` = '$coupon'  ";
 
 				if (mysqli_query($con, $query)) {
-					mysqli_query( $con,  "INSERT INTO `first_day` (`id`, `email`, `phone`, `name`, `address`, `yop`, `branch`, `chapter`, `contribution`, `add_contribution`, `total`, `reg_date`, `coupon`, `remarks`, `role`) VALUES (null, null, '$phone', '$name', null, null, null, null, '$contribution', null, '$contribution', CURRENT_TIMESTAMP(), '$coupon', null, '$role')  ON DUPLICATE KEY UPDATE   
-                    `contribution`= '$contribution', `reg_date`=CURRENT_TIMESTAMP(), `total` = '$contribution', `coupon` = '$coupon' ");
+					mysqli_query( $con,  "INSERT INTO `first_day` (`id`, `email`, `phone`, `name`, `address`, `yop`, `branch`, `chapter`, `contribution`, `add_contribution`,  `reg_date`, `coupon`, `remarks`, `role`) VALUES (null, null, '$phone', '$name', null, null, null, null, '$contribution', null,  CURRENT_TIMESTAMP(), '$coupon', null, '$role')  ON DUPLICATE KEY UPDATE   
+                    `contribution`= '$contribution', `reg_date`=CURRENT_TIMESTAMP(),  `coupon` = '$coupon' ");
 
 					header("location:staff_reg.php");
 				} else {

@@ -13,10 +13,10 @@ $role= "faculty";
 
 
 
-				$query = "UPDATE `faculty` SET `coupon` = '$coupon', `add_contribution` = '$add_contribution', `total` = '$total' WHERE `faculty`.`id` = $id";
+				$query = "UPDATE `faculty` SET `coupon` = '$coupon', `add_contribution` = '$add_contribution' WHERE `faculty`.`id` = $id";
 
 				if (mysqli_query($con, $query)) {
-					if (mysqli_query( $con,  "INSERT INTO `first_day` (`id`, `email`, `phone`, `name`, `address`, `yop`, `branch`, `chapter`, `contribution`, `add_contribution`, `total`, `reg_date`, `coupon`, `remarks`, `role`) VALUES (NULL, NULL, NULL, '$name', NULL, NULL, '$dept', NULL, '$contribution', '$add_contribution', '$total', CURRENT_TIMESTAMP(), '$coupon', '$mode_of_payment', '$role')  ON DUPLICATE KEY UPDATE   `add_contribution` = '$add_contribution' , `total` = '$total', `reg_date`=CURRENT_TIMESTAMP(), `coupon` = '$coupon' ")){
+					if (mysqli_query( $con,  "INSERT INTO `first_day` (`id`, `email`, `phone`, `name`, `address`, `yop`, `branch`, `chapter`, `contribution`, `add_contribution`, `reg_date`, `coupon`, `remarks`, `role`) VALUES (NULL, NULL, NULL, '$name', NULL, NULL, '$dept', NULL, '$contribution', '$add_contribution', CURRENT_TIMESTAMP(), '$coupon', '$mode_of_payment', '$role')  ON DUPLICATE KEY UPDATE   `add_contribution` = '$add_contribution' , `reg_date`=CURRENT_TIMESTAMP(), `coupon` = '$coupon' ")){
 
 
 					header("location:viewfac.php");
