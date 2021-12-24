@@ -8,13 +8,13 @@ $alumni_coupons=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(coupon) from f
 
 // faculty
 $faculty_total=mysqli_fetch_array(mysqli_query($con, "SELECT count(*) from faculty"));
-$faculty_arrived=mysqli_fetch_array(mysqli_query($con, "SELECT count(*) from first_day where role = 'faculty'"));
-$faculty_coupons=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(coupon) from first_day where role = 'faculty'"));
+$faculty_arrived=mysqli_fetch_array(mysqli_query($con, "SELECT count(*) from faculty where coupon != 0 "));
+$faculty_coupons=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(coupon) from faculty where coupon != 0 "));
 
 // staff
 $staff_total=mysqli_fetch_array(mysqli_query($con, "SELECT count(*) from staff"));
-$staff_arrived=mysqli_fetch_array(mysqli_query($con, "SELECT count(*) from first_day where role = 'staff'"));
-$staff_coupons=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(coupon) from first_day where role = 'staff'"));
+$staff_arrived=mysqli_fetch_array(mysqli_query($con, "SELECT count(*) from staff where coupon != 0 "));
+$staff_coupons=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(coupon) from staff where coupon != 0 "));
 
 // total
 $alumni_total_contri=mysqli_fetch_array(mysqli_query($con, "SELECT SUM(total) from alumni"));

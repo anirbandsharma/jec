@@ -39,23 +39,23 @@
 
                     <?php
                     include "connect.php";
-                    $sql = "select * from first_day where role = 'staff' ";
+                    $sql = "select * from staff where coupon != 0 ";
                     $result = mysqli_query($con, $sql);
                     while ($row = mysqli_fetch_array($result)) {
                     ?>
                         <tr>
                             <td><?php echo $row[0]; ?></td>
 
-                            <td><?php echo $row[3]; ?></td>
+                            <td><?php echo $row[1]; ?></td>
 
-                            <td style="<?php if ($row[2] == "") {
+                            <td style="<?php if ($row[5] == "") {
                                             echo 'background-color:rgba(160, 4, 4, 0.314);';
-                                        } ?>"><?php echo $row[2]; ?></td>
+                                        } ?>"><?php echo $row[5]; ?></td>
 
-                            <td><?php echo $row[10]; ?></td>
+                            <td><?php echo $row[4]; ?></td>
 
 
-                            <td><?php echo $row[12]; ?></td>
+                            <td><?php echo $row[6]; ?></td>
 
                         <?php
                         echo '</tr>';
