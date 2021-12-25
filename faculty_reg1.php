@@ -16,8 +16,7 @@ $role= "faculty";
 				`add_contribution`= '$add_contribution', `coupon` = '$coupon'  ";
 
 				if (mysqli_query($con, $query)) {
-					mysqli_query( $con,  "INSERT INTO `first_day` (`id`, `email`, `phone`, `name`, `address`, `yop`, `branch`, `chapter`, `contribution`, `add_contribution`,  `reg_date`, `coupon`, `remarks`, `role`) VALUES (null, null, '$phone', '$name', null, null, '$dept', null, '$contribution', '$add_contribution',  CURRENT_TIMESTAMP(), '$coupon', '$mode_of_payment', '$role')  ON DUPLICATE KEY UPDATE   
-                    `add_contribution`= '$add_contribution', `reg_date`='$date', `coupon` = '$coupon' ");
+					
 
 					header("location:faculty_reg.php");
 				} else {

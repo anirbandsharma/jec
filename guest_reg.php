@@ -53,6 +53,7 @@
                         <select name="remarks" id="remarks">
                             <option value="Gold Medalist">Gold Medalist</option>
                             <option value="Invited Guest">Invited Guest</option>
+                            <option value="Other">Other</option>
                         </select>
                     </div>
                     
