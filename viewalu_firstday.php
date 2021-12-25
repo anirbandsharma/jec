@@ -99,6 +99,7 @@
 <script>
 $(document).ready(function() {
     dTable=$('#datatable').DataTable( {
+        "order": [[ 0, "desc" ]],
         responsive: true,
         "dom":"lrtip"
     } );
