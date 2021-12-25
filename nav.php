@@ -1,3 +1,7 @@
+<script src="./jQueryAssets/jquery-1.8.3.min.js"></script>
+<script src="./DataTables/datatables.min.js"></script>
+
+
 <div class="head">
         <div class="part1">
             <div class="hide" id="myBtn-notification">
