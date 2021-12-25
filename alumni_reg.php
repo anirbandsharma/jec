@@ -30,7 +30,7 @@
 
                     <div class="row">
                         <label>E-mail</label>
-                        <input type="email" name="email" id="email"  placeholder="E-mail" required>
+                        <input type="email" name="email" id="email"  placeholder="E-mail" >
                     </div>
 
                     <div class="row">
