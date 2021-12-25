@@ -41,6 +41,8 @@
                     <div class="row">
                         <label>Contribution</label>
                         <input type="text" name="contribution" id="contribution" placeholder="Contribution" required>
+                        <input type="hidden" name="add_contribution" id="contribution" placeholder="Contribution" value="0">
+
                     </div>
 
                     <!-- <div class="row">

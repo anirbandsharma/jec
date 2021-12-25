@@ -21,10 +21,7 @@ $role = "alumni";
 
 $query = "UPDATE `alumni` SET `add_contribution` = '$add_contribution', `coupon` = '$coupon' WHERE `alumni`.`id` = $id";
 
-				if (mysqli_query($con, $query)) {
-					mysqli_query( $con,  "INSERT INTO `first_day` (`id`, `email`, `phone`, `name`, `address`, `yop`, `branch`, `chapter`, `contribution`, `add_contribution`,  `reg_date`, `coupon`, `remarks`, `role`) VALUES (null, '$email', '$phone', '$name', '$address', '$yop', '$branch', '$chapter', '$contribution', '$add_contribution',  CURRENT_TIMESTAMP(), '$coupon', null, '$role')  ON DUPLICATE KEY UPDATE   
-				`contribution`= '$contribution',`add_contribution`= '$add_contribution', `reg_date`='$date', `coupon` = '$coupon' ");
-
+				if (mysqli_query($con, $query)){
 					header("location:viewalu.php");
 				} else {
 					echo mysqli_error($con);
