@@ -30,13 +30,13 @@
                 <thead style="background-color: #394867; color: white;">
                     <th style="text-align:center; width:2%;">ID</th>
                     <th style="text-align:center; width:14%;">Name</th>
-                    <th style="text-align:center; width:12%;">E-mail</th>
                     <th style="text-align:center; width:10%;">Phone</th>
                     <th style="text-align:center; width:10%;">Branch</th>
                     <th style="text-align:center; width:10%;">Batch</th>
                     <th style="text-align:center; width:10%;">Chapter</th>
                     <th style="text-align:center; width:12%;">Address</th>
                     <th style="text-align:center; width:7%;">Total Contribution</th>
+                    <th style="text-align:center; width:12%;">First Day<br>Coupon</th>
                     <th style="text-align:center; width:13%;">Actions</th>
                 </thead>
                 <tbody>
@@ -51,9 +51,8 @@
                             <tr>
                             <td style="text-align:center; width:2%;"><?php echo $row[0]; ?></td>
                             
-                            <td style="text-align:center; width:14%;" ><?php echo $row[3]; ?></td>
                             
-                            <td style="text-align:center; width:12%;" ><?php echo $row[1]; ?></td>
+                            <td style="text-align:center; width:12%;" ><?php echo $row[3]; ?></td>
                             
                             <td style="text-align:center; width:10%;<?php if($row[2] == "") {echo 'background-color:rgba(160, 4, 4, 0.314);';} ?>" ><?php echo $row[2]; ?></td>
                             
@@ -67,6 +66,8 @@
                             
                             
                             <td style="text-align:center; width:7%;" ><?php echo $row[10]; ?></td>
+                            
+                            <td style="text-align:center; width:7%;" ><?php echo $row[13]; ?></td>
 
                             <td style="text-align:center; width:13%;" >
                         <form action="alumni_reg_coupon.php" method="POST">
